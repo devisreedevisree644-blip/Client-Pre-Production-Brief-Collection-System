@@ -47,7 +47,7 @@ app.get('/api/health', (req, res) => {
 });
 
 // Serve frontend static build files
-const frontendBuildPath = path.join(__dirname, '../../frontend/dist');
+const frontendBuildPath = path.join(__dirname, '../../dist');
 app.use(express.static(frontendBuildPath));
 
 // Catch-all route to serve the React application
