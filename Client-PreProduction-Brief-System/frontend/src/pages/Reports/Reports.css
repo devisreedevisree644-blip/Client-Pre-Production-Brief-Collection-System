@@ -1,0 +1,32 @@
+@import '../Dashboard/Dashboard.css';
+
+/* Reports Custom Layouts (inherits variables and charts from Dashboard) */
+
+.report-filters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.report-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.report-charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .report-charts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .report-charts-grid > div {
+    grid-column: span 1 !important;
+  }
+}

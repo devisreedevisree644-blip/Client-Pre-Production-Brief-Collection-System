@@ -1,0 +1,70 @@
+@import './variables.css';
+
+/* Responsive Media Adjustments */
+
+/* Tablets and below (1024px) */
+@media (max-width: 1024px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100% !important;
+    height: auto !important;
+    position: relative !important;
+    border-right: none !important;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .sidebar-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .sidebar-link {
+    margin-bottom: 0 !important;
+    padding: 8px 12px !important;
+  }
+
+  .page-container {
+    padding: 20px;
+  }
+}
+
+/* Mobile Screens (640px and down) */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .page-container {
+    padding: 16px;
+  }
+
+  .flex-between {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .card-glass {
+    padding: 16px;
+  }
+
+  /* Form layouts shift to single columns */
+  .form-row {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+
+  /* Hide non-critical table columns on mobile */
+  .hide-on-mobile {
+    display: none !important;
+  }
+}

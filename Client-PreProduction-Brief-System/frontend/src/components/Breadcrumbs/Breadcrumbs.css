@@ -1,0 +1,42 @@
+@import '../../styles/variables.css';
+
+/* Breadcrumbs component styling */
+
+.breadcrumbs-nav {
+  padding: 12px 32px 0 32px;
+  background-color: var(--bg-primary);
+}
+
+.breadcrumbs-list {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.breadcrumbs-item {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs-item a {
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.breadcrumbs-item a:hover {
+  color: var(--color-primary);
+}
+
+.breadcrumbs-separator {
+  margin: 0 8px;
+  color: var(--text-muted);
+  font-weight: normal;
+}
+
+.breadcrumbs-active {
+  color: var(--text-primary);
+  font-weight: 600;
+}

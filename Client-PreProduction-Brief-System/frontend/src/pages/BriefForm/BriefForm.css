@@ -1,0 +1,157 @@
+@import '../../styles/variables.css';
+
+/* Multi-step form wizard styles */
+
+.form-wizard-card {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.wizard-header {
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 24px;
+}
+
+.wizard-header h2 {
+  font-size: 1.5rem;
+  margin-bottom: 6px;
+}
+
+.wizard-header p {
+  font-size: 0.85rem;
+  margin-bottom: 20px;
+}
+
+/* Steps Progress Indicators */
+.wizard-steps-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.step-dot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.dot-num {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  background-color: var(--bg-tertiary);
+  border: 2px solid var(--border-color);
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-normal);
+}
+
+.dot-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-top: 8px;
+  white-space: nowrap;
+}
+
+.step-line {
+  flex: 1;
+  height: 2px;
+  background-color: var(--border-color);
+  margin-top: -16px; /* Offset label spacing */
+}
+
+/* Active and current state animations */
+.step-dot.active .dot-num {
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.2);
+}
+
+.step-dot.active .dot-label {
+  color: var(--text-primary);
+}
+
+.step-dot.current .dot-num {
+  background: linear-gradient(135deg, var(--color-primary), #4f46e5);
+  border-color: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 0 14px rgba(99, 102, 241, 0.4);
+}
+
+/* Form inputs shifting columns grid */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Wizard action buttons */
+.wizard-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 32px;
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+}
+
+.wizard-actions.flex-end {
+  justify-content: flex-end;
+}
+
+.wizard-actions .action-row {
+  display: flex;
+  gap: 12px;
+}
+
+/* File Attachment Cards in wizard */
+.file-upload-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 600px) {
+  .file-upload-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.file-field {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.file-field label {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.file-field input[type="file"] {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  padding: 0;
+  cursor: pointer;
+}
+
+.file-name-label {
+  font-size: 0.775rem;
+  color: var(--status-approved-text);
+  font-weight: 500;
+}

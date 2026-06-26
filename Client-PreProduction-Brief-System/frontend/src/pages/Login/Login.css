@@ -1,0 +1,129 @@
+@import '../../styles/variables.css';
+
+/* Auth Pages Common CSS Rules */
+
+.auth-page-root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-primary);
+  padding: 24px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 40px 32px;
+}
+
+.auth-header {
+  margin-bottom: 30px;
+}
+
+.auth-logo {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--text-primary);
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.auth-header h2 {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+.auth-header p {
+  font-size: 0.85rem;
+  margin-bottom: 0;
+}
+
+.auth-form {
+  margin-bottom: 24px;
+}
+
+.label-forgot-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.label-forgot-wrapper label {
+  margin-bottom: 0;
+}
+
+.btn-full-width {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+}
+
+.auth-footer p {
+  font-size: 0.85rem;
+  margin-bottom: 0;
+}
+
+.demo-login-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 0.75rem;
+  color: var(--text-muted, #71717a);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.demo-login-divider::before,
+.demo-login-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--border-color, #e4e4e7);
+}
+
+.demo-login-divider:not(:empty)::before {
+  margin-right: .5em;
+}
+
+.demo-login-divider:not(:empty)::after {
+  margin-left: .5em;
+}
+
+.demo-login-buttons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.demo-login-buttons button {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-shadow: var(--shadow-sm);
+}
+
+.demo-login-buttons button:hover {
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary);
+  color: var(--text-primary);
+  transform: translateY(-1.5px);
+  box-shadow: 0 4px 12px rgba(129, 140, 248, 0.15);
+}
+
+.demo-login-buttons button:active {
+  transform: translateY(0);
+}

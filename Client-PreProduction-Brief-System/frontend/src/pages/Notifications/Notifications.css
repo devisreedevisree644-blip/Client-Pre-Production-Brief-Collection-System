@@ -1,0 +1,71 @@
+@import '../../styles/variables.css';
+
+/* Notification Center List Styles */
+
+.notifications-list {
+  padding: 0;
+  overflow: hidden;
+}
+
+.notification-row-item {
+  display: flex;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+  position: relative;
+}
+
+.notification-row-item:last-child {
+  border-bottom: none;
+}
+
+.notification-row-item:hover {
+  background-color: var(--bg-hover);
+}
+
+.notification-row-item.unread-alert {
+  background-color: rgba(99, 102, 241, 0.05);
+}
+
+.notif-row-icon {
+  font-size: 1.5rem;
+  margin-right: 18px;
+  flex-shrink: 0;
+}
+
+.notif-row-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.notif-row-message {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.notif-row-project {
+  font-size: 0.775rem;
+  color: var(--color-secondary);
+  font-weight: 600;
+}
+
+.notif-row-date {
+  font-size: 0.725rem;
+  color: var(--text-muted);
+}
+
+/* Blue dot indicators for unread alerts */
+.unread-dot-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary);
+  margin-left: 16px;
+  box-shadow: 0 0 8px var(--color-primary);
+}

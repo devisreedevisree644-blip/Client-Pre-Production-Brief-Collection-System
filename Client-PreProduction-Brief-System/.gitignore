@@ -1,0 +1,31 @@
+# Dependency directories
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+# Local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Multer uploads directory contents
+backend/src/uploads/*
+!backend/src/uploads/.gitkeep
+
+# IDE and system files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+dist/
+build/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local workspace files folder
+files/*
+!files/README.md
+

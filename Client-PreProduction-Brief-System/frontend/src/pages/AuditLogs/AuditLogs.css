@@ -1,0 +1,13 @@
+@import '../BriefList/BriefList.css';
+
+/* Audit Log customizations */
+
+.change-details-scroll {
+  max-width: 250px;
+  max-height: 80px;
+  overflow: auto;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  padding: 6px;
+  border-radius: var(--radius-sm);
+}

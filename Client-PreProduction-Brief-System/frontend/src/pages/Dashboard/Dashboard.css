@@ -1,0 +1,229 @@
+@import '../../styles/variables.css';
+
+/* Dashboard Screen Styles */
+
+.header-row {
+  margin-bottom: 30px;
+}
+
+/* KPI Cards Layout */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.kpi-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border-left: 4px solid transparent;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.kpi-card:hover {
+  transform: translateY(-2px);
+}
+
+.kpi-icon {
+  font-size: 1.75rem;
+}
+
+.kpi-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.kpi-title {
+  font-size: 0.775rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  margin-bottom: 2px;
+}
+
+.kpi-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+/* Left borders glow accents */
+.border-glow-total { border-left-color: var(--color-primary); }
+.border-glow-submitted { border-left-color: var(--status-submitted-text); }
+.border-glow-review { border-left-color: var(--status-review-text); }
+.border-glow-approved { border-left-color: var(--status-approved-text); }
+.border-glow-revision { border-left-color: var(--status-revision-text); }
+.border-glow-archived { border-left-color: var(--status-archived-text); }
+
+.kpi-card .icon-submitted { color: var(--status-submitted-text); }
+.kpi-card .icon-review { color: var(--status-review-text); }
+.kpi-card .icon-approved { color: var(--status-approved-text); }
+.kpi-card .icon-revision { color: var(--status-revision-text); }
+.kpi-card .icon-archived { color: var(--status-archived-text); }
+
+/* Charts Layout */
+.charts-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 900px) {
+  .charts-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chart-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 20px;
+}
+
+.chart-wrapper {
+  position: relative;
+  height: 280px;
+  width: 100%;
+}
+
+/* Activities Columns */
+.activities-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .activities-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.activity-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 20px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 12px;
+}
+
+.no-activity {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-align: center;
+  padding: 30px;
+}
+
+.activity-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.activity-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.activity-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.activity-item.align-start {
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.activity-item-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-project-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.activity-project-name:hover {
+  color: var(--color-primary);
+}
+
+.activity-company {
+  font-size: 0.775rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.activity-item-aside {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.activity-date {
+  font-size: 0.725rem;
+  color: var(--text-muted);
+}
+
+/* Comment preview layouts */
+.comment-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  background: var(--bg-hover);
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  flex-shrink: 0;
+}
+
+.comment-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.comment-bubble-text {
+  font-size: 0.825rem;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.comment-bubble-text strong {
+  color: var(--text-primary);
+}
+
+.comment-preview-quote {
+  font-size: 0.825rem;
+  color: var(--text-primary);
+  background-color: var(--bg-secondary);
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
+  margin-bottom: 6px;
+  border-left: 2.5px solid var(--color-primary);
+  font-style: italic;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

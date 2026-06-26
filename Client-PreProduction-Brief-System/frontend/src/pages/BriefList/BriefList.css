@@ -1,0 +1,60 @@
+@import '../../styles/variables.css';
+
+/* Briefs Grid View Layout */
+
+.filters-panel {
+  padding: 16px 24px;
+  margin-bottom: 24px;
+  gap: 20px;
+}
+
+.search-box-wrapper {
+  flex: 1;
+  max-width: 350px;
+}
+
+.search-box-wrapper input {
+  padding: 8px 12px;
+}
+
+.filters-dropdowns {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.filters-dropdowns select {
+  width: auto;
+  padding: 8px 12px;
+  min-width: 160px;
+}
+
+/* Title text */
+.brief-title-link {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.925rem;
+}
+
+.brief-title-link:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+/* Inline status dropdown styled like a badge */
+.inline-status-select {
+  border: none;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  outline: none;
+  cursor: pointer;
+  width: auto;
+  display: inline-flex;
+}
+
+.btn-sm-padding {
+  padding: 6px 10px;
+  font-size: 0.775rem;
+}

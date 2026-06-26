@@ -1,0 +1,85 @@
+/* Design Token Variables - DigiQuest Studio */
+
+:root {
+  /* Fonts */
+  --font-title: 'Outfit', 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  /* Theme Colors (Deep Creative Studio Dark Palette) */
+  --bg-primary: #090c15;
+  --bg-secondary: #0e1322;
+  --bg-tertiary: #1a2035;
+  --bg-card: rgba(15, 23, 42, 0.65);
+  --bg-hover: rgba(129, 140, 248, 0.08);
+  --bg-sidebar: #060910;
+  
+  /* Primary & Accent Colors */
+  --color-primary: #818cf8; /* Soft Indigo */
+  --color-primary-hover: #6366f1;
+  --color-primary-light: rgba(129, 140, 248, 0.15);
+  --color-secondary: #22d3ee; /* Soft Cyan */
+  --color-secondary-hover: #06b6d4;
+  --color-secondary-light: rgba(34, 211, 238, 0.15);
+  
+  /* Functional Text Colors */
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-muted: #64748b;
+  --text-inverse: #0f172a;
+
+  /* Borders & Dividers */
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-light: rgba(255, 255, 255, 0.04);
+
+  /* Status Colors */
+  --status-draft-bg: rgba(100, 116, 139, 0.2);
+  --status-draft-text: #94a3b8;
+  
+  --status-submitted-bg: rgba(59, 130, 246, 0.15);
+  --status-submitted-text: #93c5fd;
+  
+  --status-review-bg: rgba(245, 158, 11, 0.15);
+  --status-review-text: #fde047;
+  
+  --status-revision-bg: rgba(239, 68, 68, 0.15);
+  --status-revision-text: #fca5a5;
+  
+  --status-approved-bg: rgba(16, 185, 129, 0.15);
+  --status-approved-text: #86efac;
+  
+  --status-rejected-bg: rgba(239, 68, 68, 0.2);
+  --status-rejected-text: #fca5a5;
+  
+  --status-archived-bg: rgba(100, 116, 139, 0.25);
+  --status-archived-text: #cbd5e1;
+
+  /* Priority Colors */
+  --priority-low-bg: rgba(16, 185, 129, 0.08);
+  --priority-low-text: #34d399;
+  --priority-medium-bg: rgba(59, 130, 246, 0.08);
+  --priority-medium-text: #60a5fa;
+  --priority-high-bg: rgba(245, 158, 11, 0.08);
+  --priority-high-text: #fbbf24;
+  --priority-urgent-bg: rgba(239, 68, 68, 0.12);
+  --priority-urgent-text: #f87171;
+
+  /* Box Shadows & Glassmorphic Accents */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 25px -3px rgba(0, 0, 0, 0.3), 0 4px 12px -2px rgba(0, 0, 0, 0.2);
+  --shadow-xl: 0 20px 35px -5px rgba(0, 0, 0, 0.4), 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+  --glass-bg: rgba(15, 23, 42, 0.55);
+  --glass-blur: blur(16px);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.07);
+
+  /* Spacers & Curves */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+  
+  --transition-fast: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,7 @@
+@import '../Login/Login.css';
+
+/* Register Custom Styles (Inherits from Login) */
+
+.auth-card {
+  max-width: 480px; /* Slightly wider for registration inputs */
+}

@@ -1,0 +1,91 @@
+@import './variables.css';
+
+/* Typography Styling rules */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title);
+  color: var(--text-primary);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.25rem; /* 36px */
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+}
+
+h2 {
+  font-size: 1.75rem; /* 28px */
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-size: 1.25rem; /* 20px */
+  letter-spacing: -0.01em;
+  margin-bottom: 12px;
+}
+
+h4 {
+  font-size: 1rem; /* 16px */
+  margin-bottom: 8px;
+}
+
+p {
+  font-size: 0.95rem; /* 15px */
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+
+small {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Accent Typography */
+.text-gradient {
+  background: linear-gradient(135deg, #a5b4fc 0%, #6366f1 50%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Badge status maps */
+.badge-draft { background-color: var(--status-draft-bg); color: var(--status-draft-text); }
+.badge-submitted { background-color: var(--status-submitted-bg); color: var(--status-submitted-text); }
+.badge-review { background-color: var(--status-review-bg); color: var(--status-review-text); }
+.badge-revision { background-color: var(--status-revision-bg); color: var(--status-revision-text); }
+.badge-approved { background-color: var(--status-approved-bg); color: var(--status-approved-text); }
+.badge-rejected { background-color: var(--status-rejected-bg); color: var(--status-rejected-text); }
+.badge-archived { background-color: var(--status-archived-bg); color: var(--status-archived-text); }
+
+/* Badge priorities */
+.badge-priority-low { background-color: var(--priority-low-bg); color: var(--priority-low-text); }
+.badge-priority-medium { background-color: var(--priority-medium-bg); color: var(--priority-medium-text); }
+.badge-priority-high { background-color: var(--priority-high-bg); color: var(--priority-high-text); }
+.badge-priority-urgent { background-color: var(--priority-urgent-bg); color: var(--priority-urgent-text); }
