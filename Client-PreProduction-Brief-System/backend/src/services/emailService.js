@@ -48,7 +48,10 @@ const sendEmail = async ({ to, subject, text, html }) => {
   }
 
   // Fallback / Mock delivery for local testing
-  const mockEmailDir = path.join(__dirname, '../uploads/mock_emails');
+  const mockEmailDir = process.env.VERCEL
+    ? '/tmp/mock_emails'
+    : path.join(__dirname, '../uploads/mock_emails');
+
   if (!fs.existsSync(mockEmailDir)) {
     fs.mkdirSync(mockEmailDir, { recursive: true });
   }
@@ -74,7 +77,7 @@ ${html}
   console.log(`[MOCK EMAIL SENT]`);
   console.log(`To:      ${to}`);
   console.log(`Subject: ${subject}`);
-  console.log(`Saved:   backend/src/uploads/mock_emails/email_${timestamp}_${fileSafeSubject}.html`);
+  console.log(`Saved:   ${process.env.VERCEL ? '/tmp/mock_emails/' : 'backend/src/uploads/mock_emails/'}email_${timestamp}_${fileSafeSubject}.html`);
   console.log('================================================================');
   
   return true;

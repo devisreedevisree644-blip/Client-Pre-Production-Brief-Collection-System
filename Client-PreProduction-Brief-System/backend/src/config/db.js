@@ -58,7 +58,9 @@ const translateQuery = (sql) => {
 // SQLite DB Initialization & Schema/Seed Setup
 const initSQLite = () => {
   const sqlite3 = require('sqlite3').verbose();
-  const dbFile = path.join(__dirname, '../database.sqlite');
+  const dbFile = process.env.VERCEL
+    ? '/tmp/database.sqlite'
+    : path.join(__dirname, '../database.sqlite');
   
   console.log('================================================================');
   console.log(`[Database] PostgreSQL is offline. Booting SQLite Autopilot...`);
