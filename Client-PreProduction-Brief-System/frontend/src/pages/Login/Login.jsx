@@ -37,6 +37,9 @@ const Login = () => {
 
   return (
     <div className="auth-page-root">
+      <Link to="/" className="auth-floating-back-btn">
+        &larr; Back to Home
+      </Link>
       <div className="auth-card card-glass">
         <div className="auth-header text-center">
           <Link to="/" className="auth-logo">⚡ DigiQuest</Link>

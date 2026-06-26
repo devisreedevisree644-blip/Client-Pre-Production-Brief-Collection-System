@@ -40,3 +40,38 @@
   color: var(--text-primary);
   font-weight: 600;
 }
+
+/* Back button design rules */
+.breadcrumbs-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.breadcrumbs-back-btn {
+  background-color: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+  padding: 6px 14px;
+  border-radius: var(--radius-md);
+  font-size: 0.775rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all var(--transition-fast);
+  font-family: var(--font-body);
+}
+
+.breadcrumbs-back-btn:hover {
+  background-color: var(--color-primary-light);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  transform: translateX(-2px);
+  box-shadow: 0 2px 8px rgba(129, 140, 248, 0.15);
+}
+
+.breadcrumbs-back-btn:active {
+  transform: scale(0.95) translateX(-2px);
+}

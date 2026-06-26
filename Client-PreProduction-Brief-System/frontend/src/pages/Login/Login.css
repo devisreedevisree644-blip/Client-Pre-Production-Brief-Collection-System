@@ -127,3 +127,48 @@
 .demo-login-buttons button:active {
   transform: translateY(0);
 }
+
+/* Floating back buttons for auth pages */
+.auth-floating-back-btn {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  z-index: 10;
+}
+
+.auth-floating-back-btn:hover {
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  transform: translateX(-4px);
+  box-shadow: 0 4px 12px rgba(129, 140, 248, 0.15);
+}
+
+.auth-floating-back-btn:active {
+  transform: scale(0.95) translateX(-4px);
+}
+
+@media (max-width: 768px) {
+  .auth-page-root {
+    flex-direction: column;
+    padding-top: 80px; /* Make room for back button */
+  }
+  .auth-floating-back-btn {
+    top: 20px;
+    left: 20px;
+  }
+}

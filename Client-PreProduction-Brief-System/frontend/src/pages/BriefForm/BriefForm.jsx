@@ -358,7 +358,10 @@ const BriefForm = () => {
               />
             </div>
 
-            <div className="wizard-actions flex-end">
+            <div className="wizard-actions">
+              <button className="btn btn-secondary" onClick={() => navigate(-1)}>
+                Cancel
+              </button>
               <button className="btn btn-primary" onClick={nextStep}>
                 Next step: Details
               </button>
