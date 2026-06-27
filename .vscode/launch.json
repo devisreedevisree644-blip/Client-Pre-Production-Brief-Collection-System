@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Backend Server",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "program": "${workspaceFolder}/Client-PreProduction-Brief-System/backend/src/server.js",
+      "cwd": "${workspaceFolder}/Client-PreProduction-Brief-System"
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "Launch Frontend in Chrome",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}/Client-PreProduction-Brief-System/frontend/src"
+    }
+  ]
+}
