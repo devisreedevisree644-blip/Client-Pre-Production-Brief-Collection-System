@@ -5,72 +5,72 @@
   --font-title: 'Outfit', 'Inter', system-ui, sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
 
-  /* Theme Colors (Deep Creative Studio Dark Palette) */
-  --bg-primary: #090c15;
-  --bg-secondary: #0e1322;
-  --bg-tertiary: #1a2035;
-  --bg-card: rgba(15, 23, 42, 0.65);
-  --bg-hover: rgba(129, 140, 248, 0.08);
-  --bg-sidebar: #060910;
+  /* Theme Colors (Professional Light Studio Palette) */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1f5f9;
+  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-hover: rgba(99, 102, 241, 0.05);
+  --bg-sidebar: #ffffff;
   
   /* Primary & Accent Colors */
-  --color-primary: #818cf8; /* Soft Indigo */
-  --color-primary-hover: #6366f1;
-  --color-primary-light: rgba(129, 140, 248, 0.15);
-  --color-secondary: #22d3ee; /* Soft Cyan */
-  --color-secondary-hover: #06b6d4;
-  --color-secondary-light: rgba(34, 211, 238, 0.15);
+  --color-primary: #4f46e5; /* Vivid Indigo */
+  --color-primary-hover: #3730a3;
+  --color-primary-light: rgba(79, 70, 229, 0.08);
+  --color-secondary: #0ea5e9; /* Sky Blue */
+  --color-secondary-hover: #0284c7;
+  --color-secondary-light: rgba(14, 165, 233, 0.08);
   
   /* Functional Text Colors */
-  --text-primary: #f8fafc;
-  --text-secondary: #cbd5e1;
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
   --text-muted: #64748b;
-  --text-inverse: #0f172a;
+  --text-inverse: #ffffff;
 
   /* Borders & Dividers */
-  --border-color: rgba(255, 255, 255, 0.08);
-  --border-light: rgba(255, 255, 255, 0.04);
+  --border-color: rgba(15, 23, 42, 0.08);
+  --border-light: rgba(15, 23, 42, 0.04);
 
   /* Status Colors */
-  --status-draft-bg: rgba(100, 116, 139, 0.2);
-  --status-draft-text: #94a3b8;
+  --status-draft-bg: #e2e8f0;
+  --status-draft-text: #475569;
   
-  --status-submitted-bg: rgba(59, 130, 246, 0.15);
-  --status-submitted-text: #93c5fd;
+  --status-submitted-bg: #eff6ff;
+  --status-submitted-text: #1d4ed8;
   
-  --status-review-bg: rgba(245, 158, 11, 0.15);
-  --status-review-text: #fde047;
+  --status-review-bg: #fef3c7;
+  --status-review-text: #b45309;
   
-  --status-revision-bg: rgba(239, 68, 68, 0.15);
-  --status-revision-text: #fca5a5;
+  --status-revision-bg: #fef2f2;
+  --status-revision-text: #b91c1c;
   
-  --status-approved-bg: rgba(16, 185, 129, 0.15);
-  --status-approved-text: #86efac;
+  --status-approved-bg: #ecfdf5;
+  --status-approved-text: #047857;
   
-  --status-rejected-bg: rgba(239, 68, 68, 0.2);
-  --status-rejected-text: #fca5a5;
+  --status-rejected-bg: #fff1f2;
+  --status-rejected-text: #be123c;
   
-  --status-archived-bg: rgba(100, 116, 139, 0.25);
-  --status-archived-text: #cbd5e1;
+  --status-archived-bg: #f1f5f9;
+  --status-archived-text: #475569;
 
   /* Priority Colors */
-  --priority-low-bg: rgba(16, 185, 129, 0.08);
-  --priority-low-text: #34d399;
-  --priority-medium-bg: rgba(59, 130, 246, 0.08);
-  --priority-medium-text: #60a5fa;
-  --priority-high-bg: rgba(245, 158, 11, 0.08);
-  --priority-high-text: #fbbf24;
-  --priority-urgent-bg: rgba(239, 68, 68, 0.12);
-  --priority-urgent-text: #f87171;
+  --priority-low-bg: #f0fdf4;
+  --priority-low-text: #16a34a;
+  --priority-medium-bg: #f0f9ff;
+  --priority-medium-text: #0284c7;
+  --priority-high-bg: #fffbeb;
+  --priority-high-text: #d97706;
+  --priority-urgent-bg: #fef2f2;
+  --priority-urgent-text: #dc2626;
 
   /* Box Shadows & Glassmorphic Accents */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 25px -3px rgba(0, 0, 0, 0.3), 0 4px 12px -2px rgba(0, 0, 0, 0.2);
-  --shadow-xl: 0 20px 35px -5px rgba(0, 0, 0, 0.4), 0 10px 20px -5px rgba(0, 0, 0, 0.3);
-  --glass-bg: rgba(15, 23, 42, 0.55);
-  --glass-blur: blur(16px);
-  --glass-border: 1px solid rgba(255, 255, 255, 0.07);
+  --shadow-sm: 0 1px 2px 0 rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.06), 0 2px 4px -1px rgba(15, 23, 42, 0.03);
+  --shadow-lg: 0 10px 25px -3px rgba(15, 23, 42, 0.08), 0 4px 12px -2px rgba(15, 23, 42, 0.04);
+  --shadow-xl: 0 20px 35px -5px rgba(15, 23, 42, 0.1), 0 10px 20px -5px rgba(15, 23, 42, 0.04);
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-blur: blur(12px);
+  --glass-border: 1px solid rgba(15, 23, 42, 0.08);
 
   /* Spacers & Curves */
   --radius-sm: 6px;

@@ -109,13 +109,13 @@ const Dashboard = () => {
     plugins: {
       legend: {
         position: 'bottom',
-        labels: { color: '#f3f4f6', font: { family: 'Inter' } }
+        labels: { color: '#334155', font: { family: 'Inter' } }
       },
       tooltip: {
-        backgroundColor: '#1f2937',
-        titleColor: '#fff',
-        bodyColor: '#f3f4f6',
-        borderColor: '#374151',
+        backgroundColor: '#ffffff',
+        titleColor: '#0f172a',
+        bodyColor: '#334155',
+        borderColor: 'rgba(15, 23, 42, 0.08)',
         borderWidth: 1
       }
     }
@@ -148,8 +148,8 @@ const Dashboard = () => {
   const trendChartOptions = {
     ...chartOptions,
     scales: {
-      x: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#9ca3af' } },
-      y: { grid: { color: 'rgba(255,255,255,0.05)' }, ticks: { color: '#9ca3af', stepSize: 1 } }
+      x: { grid: { color: 'rgba(15, 23, 42, 0.06)' }, ticks: { color: '#475569' } },
+      y: { grid: { color: 'rgba(15, 23, 42, 0.06)' }, ticks: { color: '#475569', stepSize: 1 } }
     }
   };
 

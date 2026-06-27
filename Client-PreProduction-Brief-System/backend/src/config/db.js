@@ -9,14 +9,22 @@ let sqliteDb = null;
 let isSQLite = false;
 
 // Create PG Pool
-pool = new Pool({
-  user: process.env.DB_USER || 'postgres',
-  host: process.env.DB_HOST || 'localhost',
-  database: process.env.DB_NAME || 'digiquest_briefs',
-  password: process.env.DB_PASSWORD || 'postgres',
-  port: parseInt(process.env.DB_PORT || '5432', 10),
-  connectionTimeoutMillis: 1500 // Quick timeout
-});
+const poolConfig = process.env.DATABASE_URL
+  ? {
+      connectionString: process.env.DATABASE_URL,
+      ssl: { rejectUnauthorized: false },
+      connectionTimeoutMillis: 10000 // 10s for Neon cold start
+    }
+  : {
+      user: process.env.DB_USER || 'postgres',
+      host: process.env.DB_HOST || 'localhost',
+      database: process.env.DB_NAME || 'digiquest_briefs',
+      password: process.env.DB_PASSWORD || 'postgres',
+      port: parseInt(process.env.DB_PORT || '5432', 10),
+      connectionTimeoutMillis: 1500 // Quick local timeout
+    };
+
+pool = new Pool(poolConfig);
 
 // Query Translator for SQLite compatibility
 const translateQuery = (sql) => {
@@ -241,9 +249,32 @@ const initDatabase = async () => {
     console.log('================================================================');
     console.log(`[Database] PostgreSQL connected successfully (Time: ${res.rows[0].now})`);
     console.log('================================================================');
-    // Ensure column exists in PG
-    await pool.query("ALTER TABLE comments ADD COLUMN IF NOT EXISTS reactions JSONB DEFAULT '{}'");
+    
+    // Check if tables exist in PostgreSQL, if not - initialize schema & seed
+    const tableCheck = await pool.query(
+      "SELECT EXISTS (SELECT FROM information_schema.tables WHERE table_schema = 'public' AND table_name = 'users')"
+    );
+    const tablesExist = tableCheck.rows[0].exists;
+    
+    if (!tablesExist) {
+      console.log('[Database] PostgreSQL tables not found. Initializing PG schema...');
+      const schemaPath = path.join(__dirname, '../../../database/schema.sql');
+      const seedPath = path.join(__dirname, '../../../database/seed.sql');
+      
+      const schemaSql = fs.readFileSync(schemaPath, 'utf8');
+      const seedSql = fs.readFileSync(seedPath, 'utf8');
+      
+      await pool.query(schemaSql);
+      console.log('[Database] PostgreSQL schema initialized successfully.');
+      
+      await pool.query(seedSql);
+      console.log('[Database] PostgreSQL default seed data populated successfully.');
+    } else {
+      // Ensure comments reaction column exists
+      await pool.query("ALTER TABLE comments ADD COLUMN IF NOT EXISTS reactions JSONB DEFAULT '{}'");
+    }
   } catch (err) {
+    console.error('[Database] Failed to connect to PostgreSQL, falling back to SQLite:', err.message);
     initSQLite();
   }
 };

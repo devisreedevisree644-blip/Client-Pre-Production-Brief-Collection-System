@@ -26,7 +26,7 @@
   font-size: 1.5rem;
   font-weight: 900;
   letter-spacing: -0.5px;
-  background: linear-gradient(135deg, #fff 30%, var(--text-secondary) 100%);
+  background: linear-gradient(135deg, var(--text-primary) 30%, var(--text-secondary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -72,7 +72,7 @@
 
 .sidebar-link:hover {
   color: var(--text-primary);
-  background-color: rgba(255, 255, 255, 0.03);
+  background-color: var(--bg-tertiary);
 }
 
 .sidebar-link.active {
@@ -88,7 +88,7 @@
 .sidebar-footer {
   padding: 20px;
   border-top: 1px solid var(--border-color);
-  background-color: rgba(9, 13, 22, 0.3);
+  background-color: var(--bg-tertiary);
 }
 
 .sidebar-user-info {

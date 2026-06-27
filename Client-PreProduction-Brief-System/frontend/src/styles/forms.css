@@ -43,7 +43,7 @@ input[type="date"]:focus,
 select:focus,
 textarea:focus {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(129, 140, 248, 0.2), 0 0 12px rgba(129, 140, 248, 0.08);
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15), 0 0 12px rgba(79, 70, 229, 0.06);
 }
 
 input::placeholder,
@@ -85,12 +85,12 @@ textarea {
 .btn-primary {
   background: linear-gradient(135deg, var(--color-primary), #6366f1);
   color: var(--text-inverse);
-  box-shadow: 0 4px 14px rgba(129, 140, 248, 0.25);
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.18);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #a5b4fc, var(--color-primary));
-  box-shadow: 0 6px 18px rgba(129, 140, 248, 0.4);
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  box-shadow: 0 6px 18px rgba(79, 70, 229, 0.28);
   transform: translateY(-1.5px);
 }
 
@@ -140,7 +140,7 @@ textarea {
   border-radius: var(--radius-lg);
   padding: 30px;
   text-align: center;
-  background-color: rgba(31, 41, 55, 0.4);
+  background-color: var(--bg-secondary);
   cursor: pointer;
   transition: all var(--transition-normal);
 }
